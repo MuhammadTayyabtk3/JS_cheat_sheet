@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Cheat Sheet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    /* General styles */
+    body {
+      background-color: #000;
+      color: #f0f0f0;
+      font-family: 'Fira Code', monospace;
+      margin: 0;
+      padding: 0;
+      font-size: 1.2rem;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      /* width: 100%; */
+      max-width: fit-content;
+      margin: 0 auto;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    h1, h2 {
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* Section styling */
+    .section {
+      border: 2px solid gold;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #111;
+    }
+
+    .section-header {
+      font-size: 1.5rem;
+      color: gold;
+      border-bottom: 2px solid gold;
+      padding-bottom: 8px;
+      margin-bottom: 10px;
+    }
+
+    .subsection-header {
+      font-size: 1.2rem;
+      color: #f0f0f0;
+      border-bottom: 1px solid white;
+      padding-bottom: 5px;
+      margin-top: 15px;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #bbb;
+      margin-top: 5px;
+    }
+
+    .code-block {
+      background-color: #222;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+      font-size: 1.1rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    /* Syntax highlighting */
+    .keyword {
+      color: gold;
+      font-weight: bold;
+    }
+
+    .string {
+      color: lightblue;
+    }
+
+    .number {
+      color: teal;
+    }
+
+    .comment {
+      color: gray;
+    }
+
+    /* Icons */
+    .icon {
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <h1>JavaScript Programming Cheat Sheet</h1>
+  <div class="container">
+    <!-- Title -->
+
+    <!-- Section 1: Hello, World -->
+    <div class="section">
+      <div class="section-header">
+        1. Hello, World
+      </div>
+      <div class="description">Basic syntax to print "Hello, World!" to the console.</div>
+      <div class="code-block">
+        <span class="keyword">console</span>.log(<span class="string">"Hello, World!"</span>);
+      </div>
+    </div>
+
+    <!-- Section 2: Data Types -->
+    <div class="section">
+      <div class="section-header">2. Data Types</div>
+      <div class="description">Common JavaScript data types.</div>
+      <div class="code-block">
+        <span class="keyword">let</span> num = <span class="number">42</span>;  <span class="comment">// Number</span><br>
+        <span class="keyword">let</span> str = <span class="string">"Hello"</span>;  <span class="comment">// String</span><br>
+        <span class="keyword">let</span> isTrue = <span class="keyword">true</span>;  <span class="comment">// Boolean</span><br>
+        <span class="keyword">let</span> obj = { name: <span class="string">"John"</span>, age: <span class="number">30</span> };  <span class="comment">// Object</span><br>
+        <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];  <span class="comment">// Array</span>
+      </div>
+    </div>
+
+    <!-- Section 3: Variables -->
+    <div class="section">
+      <div class="section-header">3. Variables</div>
+      <div class="description">Different ways to declare variables in JavaScript.</div>
+      <div class="code-block">
+        <span class="keyword">let</span> x = <span class="number">10</span>;<br>
+        <span class="keyword">const</span> y = <span class="number">20</span>;<br>
+        <span class="keyword">var</span> z = <span class="number">30</span>;
+      </div>
+    </div>
+
+    <!-- Section 4: Operators -->
+    <div class="section">
+      <div class="section-header">4. Operators</div>
+      <div class="description">Basic arithmetic and comparison operators.</div>
+      <div class="code-block">
+        <span class="let">let</span> sum = <span class="number">5</span> + <span class="number">3</span>;  <span class="comment">// Addition</span><br>
+        <span class="let">let</span> diff = <span class="number">5</span> - <span class="number">3</span>;  <span class="comment">// Subtraction</span><br>
+        <span class="let">let</span> product = <span class="number">5</span> * <span class="number">3</span>;  <span class="comment">// Multiplication</span><br>
+        <span class="let">let</span> quotient = <span class="number">5</span> / <span class="number">3</span>;  <span class="comment">// Division</span><br>
+      </div>
+    </div>
+
+    <!-- Section 5: Loops -->
+    <div class="section">
+      <div class="section-header">5. Loops</div>
+      <div class="description">Basic loop structures in JavaScript.</div>
+      <div class="code-block">
+        <span class="keyword">for</span> (<span class="let">let</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) {<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(i);<br>
+        }<br><br>
+
+        <span class="keyword">while</span> (x &lt; <span class="number">5</span>) {<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(x);<br>
+        &nbsp;&nbsp;&nbsp; x++;<br>
+        }<br>
+      </div>
+    </div>
+
+    <!-- Section 6: Control Flow -->
+    <div class="section">
+      <div class="section-header">6. Control Flow</div>
+      <div class="description">Conditional statements and branching logic.</div>
+      <div class="code-block">
+        <span class="keyword">if</span> (x &gt; 10) {<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">"Greater"</span>);<br>
+        } <span class="keyword">else</span> {<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">"Smaller"</span>);<br>
+        }<br><br>
+
+        <span class="keyword">switch</span> (color) {<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">case</span> <span class="string">"red"</span>:<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">"Red"</span>);<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">break</span>;<br>
+        }</div>
+    </div>
+
+    <!-- Section 7: Functions -->
+    <div class="section">
+      <div class="section-header">7. Functions</div>
+      <div class="description">Defining and calling functions.</div>
+      <div class="code-block">
+        <span class="keyword">function</span> greet(name) {<br>
+        &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> <span class="string">"Hello, "</span> + name;<br>
+        }<br>
+        <span class="keyword">let</span> greeting = greet(<span class="string">"John"</span>);<br>
+        <span class="keyword">console</span>.log(greeting);
+      </div>
+    </div>
+
+    <!-- Add more sections as needed -->
+     <!-- Section 8: Advanced Syntax -->
+  <!-- Section 1: Destructuring -->
+  <div class="section">
+    <div class="section-header">8AS(1.) Destructuring</div>
+    <div class="description">Extracting values from arrays or objects into variables.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> [a, b] = [<span class="number">1</span>, <span class="number">2</span>];<br>
+      <span class="keyword">let</span> {name, age} = {name: <span class="string">"John"</span>, age: <span class="number">30</span>};
+    </div>
+  </div>
+
+  <!-- Section 2: Spread & Rest Operators -->
+  <div class="section">
+    <div class="section-header">8AS(2.) Spread & Rest Operators</div>
+    <div class="description">Spread copies elements from arrays or objects, rest collects multiple elements into one.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];<br>
+      <span class="keyword">let</span> arr2 = [...arr1, <span class="number">4</span>];  <span class="comment">// Spread</span><br>
+      <span class="keyword">let</span> sum = (<span class="keyword">...args</span>) => args.reduce(<span class="keyword">function</span> (acc, num) {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> acc + num;<br>
+      });
+    </div>
+  </div>
+
+  <!-- Section 3: Template Literals -->
+  <div class="section">
+    <div class="section-header">8AS(3.) Template Literals</div>
+    <div class="description">Using backticks for multi-line strings and string interpolation.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> name = <span class="string">"John"</span>;<br>
+      <span class="keyword">let</span> greeting = <span class="string">`Hello, ${name}`</span>;
+    </div>
+  </div>
+
+  <!-- Section 4: Optional Chaining -->
+  <div class="section">
+    <div class="section-header">8AS(4.) Optional Chaining</div>
+    <div class="description">Access properties of an object without worrying if it’s undefined or null.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> user = { profile: { name: <span class="string">"John"</span> } };<br>
+      <span class="keyword">let</span> username = user?.profile?.name;
+    </div>
+  </div>
+
+  <!-- Section 5: Modules -->
+  <div class="section">
+    <div class="section-header">8AS(5.) Modules</div>
+    <div class="description">Import and export functions and variables between JavaScript files.</div>
+    <div class="code-block">
+      <span class="keyword">import</span> { myFunction } <span class="keyword">from</span> <span class="string">'./myModule'</span>;<br>
+      <span class="keyword">export</span> <span class="keyword">function</span> myFunction() { ... };
+    </div>
+  </div>
+      <!-- Section 9: Closures -->
+      <div class="section">
+        <div class="section-header">9. Closures</div>
+        <div class="description">A function that retains access to its lexical scope even after the function is executed.</div>
+        <div class="code-block">
+          <span class="keyword">function</span> outer() {<br>
+          &nbsp;&nbsp;&nbsp; <span class="keyword">let</span> outerVar = <span class="number">10</span>;<br>
+          &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> <span class="keyword">function</span> inner() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(outerVar);<br>
+          &nbsp;&nbsp;&nbsp; };<br>
+          }<br>
+          <span class="keyword">let</span> innerFunc = outer();<br>
+          innerFunc();
+        </div>
+      </div>
+  
+      <!-- Section 10: Higher-order Functions -->
+      <div class="section">
+        <div class="section-header">10. Higher-order Functions</div>
+        <div class="description">Functions that take other functions as arguments or return them.</div>
+        <div class="code-block">
+          <span class="keyword">let</span> double = <span class="keyword">function</span>(x) {<br>
+          &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> x * <span class="number">2</span>;<br>
+          };<br>
+          <span class="keyword">let</span> result = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].map(double);
+        </div>
+      </div>
+  
+      <!-- Section 11: The this Keyword -->
+      <div class="section">
+        <div class="section-header">11. The this Keyword</div>
+        <div class="description">Refers to the object that the function is called upon.</div>
+        <div class="code-block">
+          <span class="keyword">let</span> person = {<br>
+          &nbsp;&nbsp;&nbsp; name: <span class="string">"John"</span>,<br>
+          &nbsp;&nbsp;&nbsp; greet: <span class="keyword">function</span>() {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">`Hello, ${this.name}`</span>);<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          };<br>
+          person.greet();
+        </div>
+      </div>
+  
+      <!-- Section 12: Event Delegation -->
+      <div class="section">
+        <div class="section-header">12. Event Delegation</div>
+        <div class="description">A method to handle events efficiently on dynamically created elements.</div>
+        <div class="code-block">
+          <span class="keyword">document</span>.querySelector(<span class="string">'ul'</span>).addEventListener(<span class="string">'click'</span>, <span class="keyword">function</span>(event) {<br>
+          &nbsp;&nbsp;&nbsp; <span class="keyword">if</span> (event.target.tagName === <span class="string">'LI'</span>) {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">'List item clicked'</span>);<br>
+          &nbsp;&nbsp;&nbsp; }<br>
+          });
+        </div>
+      </div>
+      <!-- Section 13: Async Iteration (for-await-of) -->
+<div class="section">
+    <div class="section-header">13. Async Iteration (for-await-of)</div>
+    <div class="description">Iterate over asynchronous data sources like streams or async generators.</div>
+    <div class="code-block">
+      <span class="keyword">async</span> <span class="keyword">function</span> fetchData() {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">for</span> (<span class="keyword">await</span> <span class="keyword">let</span> data of getDataAsync()) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(data);<br>
+      &nbsp;&nbsp;&nbsp; }<br>
+      }<br>
+      fetchData();
+    </div>
+  </div>
+  
+  <!-- Section 14: Map & Set -->
+  <div class="section">
+    <div class="section-header">14. Map & Set</div>
+    <div class="description">Maps store key-value pairs, and Sets store unique values.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> map = new Map();<br>
+      map.set(<span class="string">"name"</span>, <span class="string">"John"</span>);<br>
+      <span class="keyword">let</span> set = new Set();<br>
+      set.add(<span class="number">1</span>);<br>
+      set.add(<span class="number">2</span>);
+    </div>
+  </div>
+  
+  <!-- Section 15: Functional Programming -->
+  <div class="section">
+    <div class="section-header">15. Functional Programming</div>
+    <div class="description">Using pure functions, immutability, and higher-order functions.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> add = (a, b) => a + b;<br>
+      <span class="keyword">let</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];<br>
+      <span class="keyword">let</span> sum = numbers.reduce(add, <span class="number">0</span>);
+    </div>
+  </div>
+  
+  <!-- Section 16: Debouncing & Throttling -->
+  <div class="section">
+    <div class="section-header">16. Debouncing & Throttling</div>
+    <div class="description">Control the frequency of function executions to optimize performance.</div>
+    <div class="code-block">
+      <span class="comment">// Debounce</span><br>
+      <span class="keyword">function</span> debounce(func, delay) {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">let</span> timer;<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> <span class="keyword">function</span>(...args) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; clearTimeout(timer);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; timer = setTimeout(<span class="keyword">function</span>() {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; func(...args);<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }, delay);<br>
+      };<br>
+      }
+    </div>
+  </div>
+  
+  <!-- Section 17: Prototypes & Inheritance -->
+  <div class="section">
+    <div class="section-header">17. Prototypes & Inheritance</div>
+    <div class="description">JavaScript objects can inherit properties from other objects through prototypes.</div>
+    <div class="code-block">
+      <span class="keyword">function</span> Person(name) {<br>
+      &nbsp;&nbsp;&nbsp; this.name = name;<br>
+      }<br>
+      Person.prototype.sayHello = <span class="keyword">function</span>() {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">`Hello, ${this.name}`</span>);<br>
+      };<br>
+      <span class="keyword">let</span> person = new Person(<span class="string">"John"</span>);<br>
+      person.sayHello();
+    </div>
+  </div>
+  
+  <!-- Section 18: Memory Management -->
+  <div class="section">
+    <div class="section-header">18. Memory Management</div>
+    <div class="description">Understanding garbage collection and memory leaks in JavaScript.</div>
+    <div class="code-block">
+      <span class="comment">// Avoid memory leaks by clearing timers and event listeners</span><br>
+      <span class="keyword">let</span> timer = setInterval(<span class="keyword">function</span>() { ... }, <span class="number">1000</span>);<br>
+      <span class="keyword">clearInterval</span>(timer);
+    </div>
+  </div>
+  
+  <!-- Section 19: JavaScript Design Patterns -->
+  <div class="section">
+    <div class="section-header">19. JavaScript Design Patterns</div>
+    <div class="description">Common design patterns used in JavaScript for structuring code.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> singleton = (function() {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">let</span> instance;<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> <span class="keyword">function</span>() {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">if</span> (!instance) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; instance = <span class="keyword">new</span> Object();<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="keyword">return</span> instance;<br>
+      &nbsp;&nbsp;&nbsp; };<br>
+      })();
+    </div>
+  </div>
+  
+  <!-- Section 20: Web APIs -->
+  <div class="section">
+    <div class="section-header">20. Web APIs</div>
+    <div class="description">JavaScript APIs for interacting with the browser environment.</div>
+    <div class="code-block">
+      <span class="keyword">fetch</span>(<span class="string">"https://api.example.com"</span>).then(response => response.json()).then(data => {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(data);<br>
+      });
+    </div>
+  </div>
+  
+  <!-- Section 21: DOM Manipulation -->
+  <div class="section">
+    <div class="section-header">21. DOM Manipulation</div>
+    <div class="description">Interacting with HTML elements using JavaScript.</div>
+    <div class="code-block">
+      <span class="keyword">document</span>.querySelector(<span class="string">'#myElement'</span>).textContent = <span class="string">"New Text"</span>;<br>
+      <span class="keyword">document</span>.querySelector(<span class="string">'#myButton'</span>).addEventListener(<span class="string">'click'</span>, () => {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">alert</span>(<span class="string">"Button clicked!"</span>);<br>
+      });
+    </div>
+  </div>
+  
+  <!-- Section 22: Promises & Async/Await -->
+  <div class="section">
+    <div class="section-header">22. Promises & Async/Await</div>
+    <div class="description">Handling asynchronous code with Promises and Async/Await.</div>
+    <div class="code-block">
+      <span class="keyword">function</span> fetchData() {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">return</span> new <span class="keyword">Promise</span>((resolve, reject) => {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; resolve(<span class="string">"Data"</span>);<br>
+      &nbsp;&nbsp;&nbsp; });<br>
+      }<br>
+      <span class="keyword">async</span> <span class="keyword">function</span> asyncFetch() {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">let</span> result = <span class="keyword">await</span> fetchData();<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(result);<br>
+      }<br>
+      asyncFetch();
+    </div>
+  </div>
+  
+  <!-- Section 23: Array/Object Methods -->
+  <div class="section">
+    <div class="section-header">23. Array/Object Methods</div>
+    <div class="description">Commonly used methods for arrays and objects.</div>
+    <div class="code-block">
+      <span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];<br>
+      arr.map(x => x * <span class="number">2</span>);<br>
+      <span class="keyword">let</span> obj = {<br>
+      &nbsp;&nbsp;&nbsp; name: <span class="string">"John"</span>,<br>
+      &nbsp;&nbsp;&nbsp; age: <span class="number">30</span><br>
+      };<br>
+      <span class="keyword">Object.keys</span>(obj);<br>
+      <span class="keyword">Object.values</span>(obj);
+    </div>
+  </div>
+  
+  <!-- Section 24: Class Syntax -->
+  <div class="section">
+    <div class="section-header">24. Class Syntax</div>
+    <div class="description">Modern way to define classes and objects in JavaScript.</div>
+    <div class="code-block">
+      <span class="keyword">class</span> Person {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">constructor</span>(name, age) {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.name = name;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.age = age;<br>
+      &nbsp;&nbsp;&nbsp; }<br>
+      }<br>
+      <span class="keyword">let</span> person = new Person(<span class="string">"John"</span>, <span class="number">30</span>);
+    </div>
+  </div>
+  
+  <!-- Section 25: Event Loop & Async Concepts -->
+  <div class="section">
+    <div class="section-header">25. Event Loop & Async Concepts</div>
+    <div class="description">Understanding the event loop, call stack, and asynchronous behavior in JavaScript.</div>
+    <div class="code-block">
+      <span class="keyword">console</span>.log(<span class="string">"Start"</span>);<br>
+      <span class="keyword">setTimeout</span>(() => {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">"Timeout"</span>);<br>
+      }, <span class="number">1000</span>);<br>
+      <span class="keyword">console</span>.log(<span class="string">"End"</span>);
+    </div>
+  </div>
+  
+  <!-- Section 26: Error Handling -->
+  <div class="section">
+    <div class="section-header">26. Error Handling</div>
+    <div class="description">Using try-catch-finally to handle errors in JavaScript.</div>
+    <div class="code-block">
+      <span class="keyword">try</span> {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">let</span> result = <span class="keyword">JSON</span>.parse(<span class="string">"Invalid JSON"</span>);<br>
+      } <span class="keyword">catch</span> (e) {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">"Error: " + e.message</span>);<br>
+      }<br>
+      <span class="keyword">finally</span> {<br>
+      &nbsp;&nbsp;&nbsp; <span class="keyword">console</span>.log(<span class="string">"Cleanup"</span>);<br>
+      }
+    </div>
+  </div>
+  
+    <!-- Continue to add the rest of your sections (8-26) with similar format -->
+
+  </div>
+
+</body>
+</html>
